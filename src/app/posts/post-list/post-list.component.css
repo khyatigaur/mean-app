@@ -2,3 +2,15 @@
   display: block;
   margin-top: 1rem;
 }
+
+.post-image {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.post-image img {
+  height: 100%;
+}
+mat-spinner{
+  margin:auto
+}

@@ -1,6 +1,9 @@
 <mat-toolbar color="primary">
   <span><a routerLink="/">My messsages</a></span>
   <span class="spacer"></span>
-  <span><a mat-button routerLinkActive="mat-acccent" routerLink="/create">Create post</a></span>
-
+  <span *ngIf="isUserAuthenticated"><a mat-button routerLinkActive="mat-acccent" routerLink="/create">Create post</a></span>
+  <span *ngIf="!isUserAuthenticated"><a mat-button routerLinkActive="mat-acccent" routerLink="/signup">Signup</a></span>
+  <span *ngIf="!isUserAuthenticated"><a mat-button routerLinkActive="mat-acccent" routerLink="/login">Login</a></span>
+  <span *ngIf="isUserAuthenticated"><a mat-button routerLinkActive="mat-acccent" (click)="onLogout()"
+    >Logout</a></span>
 </mat-toolbar>
